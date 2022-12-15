@@ -1,0 +1,173 @@
+<h1 class="head" >Add user</h1>
+
+<div class="container">
+<mat-tab-group dynamicHeight>
+
+   <mat-tab label="User details">
+    <div class="example-small-box mat-elevation-z4">
+             <h2 class="text">User details</h2>
+      <b class="t8">Admin ?</b>
+<b class="t10">PAN card </b>
+  <input class="ip4" placeholder="Upload" type="file">
+
+      <b class="t11">Address Proof (Aadhar card) </b>
+  <input  class="ip5" placeholder="Upload" type="file">
+
+<mat-radio-group class="rbtn" >
+  <mat-radio-button >Yes </mat-radio-button>
+    <p> </p>
+  <mat-radio-button value="2">   NO</mat-radio-button>
+</mat-radio-group>
+
+       <b class="t9">Salutation</b>
+
+<mat-radio-group class="rbtn2" >
+  <mat-radio-button value="1">Mr. </mat-radio-button>
+  <mat-radio-button value="2">Mrs </mat-radio-button>
+  <mat-radio-button value="3">Master. </mat-radio-button>
+
+  <mat-radio-button value="4">Miss.</mat-radio-button>
+</mat-radio-group>
+
+      <div class="cont2">
+ <h2 class="text">First Name</h2>
+
+      <input class="ip1" placeholder="Enter Details">
+
+      <b class="t2">Employee ID*</b>
+
+       <select class="dd1"><mat-icon>keyboard_arrow_down</mat-icon>
+    <option>Departments</option>
+        <option>Master Admin</option>
+  </select>
+
+       <b class="t3">Role</b>
+
+      <select class="dd1" id="dd2"><mat-icon>keyboard_arrow_down</mat-icon>
+    <option>Departments</option>
+        <option>Master Admin</option>
+  </select>
+
+        <select class="dd1" id="dd3"><mat-icon>keyboard_arrow_down</mat-icon>
+    <option>Departments</option>
+        <option>Master Admin</option>
+  </select>
+
+         <select class="dd1" id="dd4"><mat-icon>keyboard_arrow_down</mat-icon>
+    <option>Departments</option>
+        <option>Master Admin</option>
+  </select>
+
+        <select class="dd1" id="dd5"><mat-icon>keyboard_arrow_down</mat-icon>
+    <option>Departments</option>
+        <option>Master Admin</option>
+  </select>
+
+       <b class="t4">Department</b>
+
+      <b class="t5">Reporting Manager</b>
+      <b class="t6">User Grade</b>
+      <b class="t7">Work Location</b>
+
+      <button class="b1" type="submit">Back</button>
+            <button class="b2" type="submit">Next</button>
+
+        </div>
+    </div>
+  </mat-tab>
+
+
+
+  <mat-tab label="Other details ">
+    <div class="example-large-box mat-elevation-z4">
+       <h2 class="text">EmployeeDetails</h2>
+
+      <input class="ip1" placeholder="Enter Details">
+
+      <b class="t2">Employee ID*</b>
+
+       <select class="dd1"><mat-icon>keyboard_arrow_down</mat-icon>
+    <option>Departments</option>
+        <option>Master Admin</option>
+  </select>
+
+       <b class="t3">Role</b>
+
+      <select class="dd1" id="dd2"><mat-icon>keyboard_arrow_down</mat-icon>
+    <option>Departments</option>
+        <option>Master Admin</option>
+  </select>
+
+        <select class="dd1" id="dd3"><mat-icon>keyboard_arrow_down</mat-icon>
+    <option>Departments</option>
+        <option>Master Admin</option>
+  </select>
+
+         <select class="dd1" id="dd4"><mat-icon>keyboard_arrow_down</mat-icon>
+    <option>Departments</option>
+        <option>Master Admin</option>
+  </select>
+
+        <select class="dd1" id="dd5"><mat-icon>keyboard_arrow_down</mat-icon>
+    <option>Departments</option>
+        <option>Master Admin</option>
+  </select>
+
+       <b class="t4">Department</b>
+
+      <b class="t5">Reporting Manager</b>
+      <b class="t6">User Grade</b>
+      <b class="t7">Work Location</b>
+
+      <button class="b1" type="submit">Back</button>
+            <button class="b2" type="submit">Next</button>
+
+    </div>
+  </mat-tab>
+
+
+
+  <mat-tab label="Permissions ">
+
+      <div class="cont5">
+ <mat-table [formGroup]="firstFormGroup" [dataSource]="dataSource" class="mat-elevation-z8">
+ <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+    <mat-cell *matCellDef="let element"> <mat-slide-toggle>{{element.weight}}</mat-slide-toggle>
+ </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> <mat-slide-toggle>{{element.position}}</mat-slide-toggle> </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+
+  <ng-container matColumnDef="weight">
+    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+    <mat-cell *matCellDef="let element">  <button mat-button [matMenuTriggerFor]="menu">{{element.name}}<mat-icon>keyboard_arrow_down</mat-icon> </button>
+<mat-menu #menu="matMenu">
+
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu> </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+</div>
+
+
+
+  </mat-tab>
+</mat-tab-group>
+</div>
